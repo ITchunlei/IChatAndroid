@@ -3,14 +3,22 @@ package com.chunlei.ichat;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class IChatActivity extends Activity {
+	private ViewPager mViewPager;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ichat);
+		mViewPager = (ViewPager) findViewById(R.id.view_pager);
+		mViewPager.addView(LayoutInflater.from(this).inflate(R.layout.chat, null));
+		mViewPager.setCurrentItem(0);
 	}
 	
 	@Override
@@ -29,6 +37,24 @@ public class IChatActivity extends Activity {
 		default:
 			return super.onOptionsItemSelected(item);
 		}
+	}
+	
+	
+	class IChatViewPagerAdapter extends PagerAdapter {
+
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public boolean isViewFromObject(View arg0, Object arg1) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		
 	}
 
 }
