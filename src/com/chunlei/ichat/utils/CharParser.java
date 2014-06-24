@@ -54,7 +54,7 @@ public class CharParser {
 		int ascii = 0;
 		byte[] bytes = null;
 		try {
-			bytes = chinese.getBytes("utf-8");
+			bytes = chinese.getBytes("gb2312");
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -93,7 +93,7 @@ public class CharParser {
 	
     public static String getSelling(String str) {  
         String key, value;  
-        StringBuilder buffer = new StringBuilder();  
+        StringBuilder buffer = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {  
             key = str.substring(i, i + 1);  
             if (key.getBytes().length >= 2) {  
@@ -109,8 +109,7 @@ public class CharParser {
         return buffer.toString();  
     }  
   
-    public static String getSpelling() {  
+    public static String getSpelling(String str) {
     	return null;
-       // return this.getSelling(this.getResource());  
-    }  
+    }
 }

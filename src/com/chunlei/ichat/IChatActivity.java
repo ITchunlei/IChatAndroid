@@ -1,11 +1,13 @@
 package com.chunlei.ichat;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 import com.chunlei.ichat.model.User;
 import com.chunlei.ichat.utils.CharParser;
+import com.chunlei.ichat.utils.PinYinUtil;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -51,17 +53,10 @@ public class IChatActivity extends Activity {
 		getFragmentManager().beginTransaction().commit();
 		mAdapter = new IChatViewPagerAdapter(mViews);
 		mViewPager.setAdapter(mAdapter);
-		
-		
-		
 		mChatList = (ListView) mViews.get(0).findViewById(R.id.chat_list);
 		mDiscoveryList = (ListView) mViews.get(1).findViewById(R.id.discovery_list);
 		mContactsList = (ListView) mViews.get(2).findViewById(R.id.contacts_list);
-		
-		
-		
-		String str = CharParser.getSelling("你好鸭");
-		Log.i("-------------", str + "--------------------------------------------------");
+
 	}
 	
 	@Override
