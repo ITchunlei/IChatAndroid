@@ -21,4 +21,7 @@
     <string name="title_activity_ichat">iChat</string>
 	<string name="action_add">add</string>
 	<string name="action_add_friend">添加朋友</string>
+	<string name="tab_chat">聊天</string>
+	<string name="tab_discovery">发现</string>
+	<string name="tab_contacts">通讯录</string>
 </resources>
