@@ -7,7 +7,7 @@
 
 package com.chunlei.ichat;
 
-import com.chunlei.im.R;
+import com.chunlei.ichat.R;
 
 import android.os.Bundle;
 import android.app.Activity;
