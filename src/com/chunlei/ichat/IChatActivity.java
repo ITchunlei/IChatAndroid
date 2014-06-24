@@ -1,7 +1,11 @@
 package com.chunlei.ichat;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+
+import com.chunlei.ichat.model.User;
+import com.chunlei.ichat.utils.CharParser;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -19,12 +23,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnDragListener;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 public class IChatActivity extends Activity {
 	private ViewPager mViewPager;
 	private IChatViewPagerAdapter mAdapter;
 	private List<View> mViews;
+	
+	private ListView mChatList;
+	private ListView mDiscoveryList;
+	private ListView mContactsList;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,6 +51,17 @@ public class IChatActivity extends Activity {
 		getFragmentManager().beginTransaction().commit();
 		mAdapter = new IChatViewPagerAdapter(mViews);
 		mViewPager.setAdapter(mAdapter);
+		
+		
+		
+		mChatList = (ListView) mViews.get(0).findViewById(R.id.chat_list);
+		mDiscoveryList = (ListView) mViews.get(1).findViewById(R.id.discovery_list);
+		mContactsList = (ListView) mViews.get(2).findViewById(R.id.contacts_list);
+		
+		
+		
+		String str = CharParser.getSelling("你好鸭");
+		Log.i("-------------", str + "--------------------------------------------------");
 	}
 	
 	@Override
