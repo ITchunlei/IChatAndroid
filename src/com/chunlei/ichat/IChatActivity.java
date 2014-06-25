@@ -45,17 +45,23 @@ public class IChatActivity extends Activity {
 		mViewPager = (ViewPager) findViewById(R.id.view_pager);
 		mViewPager.setCurrentItem(0);
 		
-		mViews = new ArrayList<View>();
-		mViews.add(LayoutInflater.from(this).inflate(R.layout.chat, null));
-		mViews.add(LayoutInflater.from(this).inflate(R.layout.discovery, null));
-		mViews.add(LayoutInflater.from(this).inflate(R.layout.contacts, null));
+		mViewPager.addView(LayoutInflater.from(this).inflate(R.layout.chat, null));
+		mViewPager.addView(LayoutInflater.from(this).inflate(R.layout.discovery, null));
+		mViewPager.addView(LayoutInflater.from(this).inflate(R.layout.contacts, null));
 		
-		getFragmentManager().beginTransaction().commit();
-		mAdapter = new IChatViewPagerAdapter(mViews);
-		mViewPager.setAdapter(mAdapter);
-		mChatList = (ListView) mViews.get(0).findViewById(R.id.chat_list);
-		mDiscoveryList = (ListView) mViews.get(1).findViewById(R.id.discovery_list);
-		mContactsList = (ListView) mViews.get(2).findViewById(R.id.contacts_list);
+//		
+//		mViews = new ArrayList<View>();
+//		mViews.add(LayoutInflater.from(this).inflate(R.layout.chat, null));
+//		mViews.add(LayoutInflater.from(this).inflate(R.layout.discovery, null));
+//		mViews.add(LayoutInflater.from(this).inflate(R.layout.contacts, null));
+//		
+//		getFragmentManager().beginTransaction().commit();
+//		mAdapter = new IChatViewPagerAdapter(mViews);
+//		mViewPager.setAdapter(mAdapter);
+//		
+//		mChatList = (ListView) mViews.get(0).findViewById(R.id.chat_list);
+//		mDiscoveryList = (ListView) mViews.get(1).findViewById(R.id.discovery_list);
+//		mContactsList = (ListView) mViews.get(2).findViewById(R.id.contacts_list);
 
 	}
 	

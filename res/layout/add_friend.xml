@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     tools:context=".AddFriendActivity" >
     <SearchView
+        android:id="@+id/add_friend_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 <!-- 	<EditText

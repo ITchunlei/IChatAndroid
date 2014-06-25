@@ -19,6 +19,7 @@
 	    android:textSize="12sp"
 	    android:textColorHint="#aaa"
 	    android:layout_margin="10dp"
+	    android:password="true"
 	    android:hint="@string/register_password_hint"/>
 	<EditText
 	    android:id="@+id/register_repassword"
@@ -27,6 +28,7 @@
 	    android:textSize="12sp"
 	    android:textColorHint="#aaa"
 	    android:layout_margin="10dp"
+	    android:password="true"
 	    android:hint="@string/register_repassword_hint"/>
 	<Button
 	    android:id="@+id/register_ok"
